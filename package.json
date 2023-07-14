@@ -3,5 +3,15 @@
   "version": "1.0.0",
   "main": "index.js",
   "author": "zhujiacheng06 <zhujiacheng06@meituan.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "scripts": {
+    "dev": "vite"
+  },
+  "dependencies": {
+    "lodash": "^4.17.21",
+    "lodash-es": "^4.17.21"
+  },
+  "devDependencies": {
+    "vite": "^4.4.4"
+  }
 }
