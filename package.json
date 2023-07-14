@@ -1,0 +1,7 @@
+{
+  "name": "vite-demo",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "zhujiacheng06 <zhujiacheng06@meituan.com>",
+  "license": "MIT"
+}
