@@ -5,7 +5,9 @@
   "author": "zhujiacheng06 <zhujiacheng06@meituan.com>",
   "license": "MIT",
   "scripts": {
-    "dev": "vite"
+    "dev": "vite",
+    "build": "vite build",
+    "test": "vite --mode test"
   },
   "dependencies": {
     "lodash": "^4.17.21",
