@@ -9,16 +9,336 @@ dependencies:
     version: registry.npmmirror.com/lodash-es@4.17.21
 
 devDependencies:
+  postcss-preset-env:
+    specifier: ^9.0.0
+    version: 9.0.0
   vite:
     specifier: ^4.4.4
     version: registry.npmmirror.com/vite@4.4.4
+  vite-aliases:
+    specifier: ^0.8.7
+    version: 0.8.7
 
 packages:
 
-  registry.npmmirror.com/@esbuild/android-arm64@0.18.13:
-    resolution: {integrity: sha512-j7NhycJUoUAG5kAzGf4fPWfd17N6SM3o1X6MlXVqfHvs2buFraCJzos9vbeWjLxOyBKHyPOnuCuipbhvbYtTAg==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@esbuild/android-arm64/-/android-arm64-0.18.13.tgz}
-    name: '@esbuild/android-arm64'
-    version: 0.18.13
+  /@csstools/cascade-layer-name-parser@1.0.3(@csstools/css-parser-algorithms@2.3.0)(@csstools/css-tokenizer@2.1.1):
+    resolution: {integrity: sha1-fwSaZwweBxECJDq2w5IXSETKbNc=, tarball: '@csstools/cascade-layer-name-parser/download/@csstools/cascade-layer-name-parser-1.0.3.tgz'}
+    engines: {node: ^14 || ^16 || >=18}
+    peerDependencies:
+      '@csstools/css-parser-algorithms': ^2.3.0
+      '@csstools/css-tokenizer': ^2.1.1
+    dependencies:
+      '@csstools/css-parser-algorithms': 2.3.0(@csstools/css-tokenizer@2.1.1)
+      '@csstools/css-tokenizer': 2.1.1
+    dev: true
+
+  /@csstools/color-helpers@3.0.0:
+    resolution: {integrity: sha1-tkqdhmY7bYQ7Fp9dowD3jAJC78I=, tarball: '@csstools/color-helpers/download/@csstools/color-helpers-3.0.0.tgz'}
+    engines: {node: ^14 || ^16 || >=18}
+    dev: true
+
+  /@csstools/css-calc@1.1.2(@csstools/css-parser-algorithms@2.3.0)(@csstools/css-tokenizer@2.1.1):
+    resolution: {integrity: sha1-vyw3a7uaQ95IUafvzeGBjRjg/n0=, tarball: '@csstools/css-calc/download/@csstools/css-calc-1.1.2.tgz'}
+    engines: {node: ^14 || ^16 || >=18}
+    peerDependencies:
+      '@csstools/css-parser-algorithms': ^2.3.0
+      '@csstools/css-tokenizer': ^2.1.1
+    dependencies:
+      '@csstools/css-parser-algorithms': 2.3.0(@csstools/css-tokenizer@2.1.1)
+      '@csstools/css-tokenizer': 2.1.1
+    dev: true
+
+  /@csstools/css-color-parser@1.2.2(@csstools/css-parser-algorithms@2.3.0)(@csstools/css-tokenizer@2.1.1):
+    resolution: {integrity: sha1-cw5p63Lv3P1kT4sU/NuBa2mkwpA=, tarball: '@csstools/css-color-parser/download/@csstools/css-color-parser-1.2.2.tgz'}
+    engines: {node: ^14 || ^16 || >=18}
+    peerDependencies:
+      '@csstools/css-parser-algorithms': ^2.3.0
+      '@csstools/css-tokenizer': ^2.1.1
+    dependencies:
+      '@csstools/color-helpers': 3.0.0
+      '@csstools/css-calc': 1.1.2(@csstools/css-parser-algorithms@2.3.0)(@csstools/css-tokenizer@2.1.1)
+      '@csstools/css-parser-algorithms': 2.3.0(@csstools/css-tokenizer@2.1.1)
+      '@csstools/css-tokenizer': 2.1.1
+    dev: true
+
+  /@csstools/css-parser-algorithms@2.3.0(@csstools/css-tokenizer@2.1.1):
+    resolution: {integrity: sha1-DMOmVtwtY4Nw7Pb5g1iXO/vQAUE=, tarball: '@csstools/css-parser-algorithms/download/@csstools/css-parser-algorithms-2.3.0.tgz'}
+    engines: {node: ^14 || ^16 || >=18}
+    peerDependencies:
+      '@csstools/css-tokenizer': ^2.1.1
+    dependencies:
+      '@csstools/css-tokenizer': 2.1.1
+    dev: true
+
+  /@csstools/css-tokenizer@2.1.1:
+    resolution: {integrity: sha1-B64RoKBjZdfsaGVJ23tym8A2Uo4=, tarball: '@csstools/css-tokenizer/download/@csstools/css-tokenizer-2.1.1.tgz'}
+    engines: {node: ^14 || ^16 || >=18}
+    dev: true
+
+  /@csstools/media-query-list-parser@2.1.2(@csstools/css-parser-algorithms@2.3.0)(@csstools/css-tokenizer@2.1.1):
+    resolution: {integrity: sha1-bvZCtyjTDBAJv7ujIRx+TBEwJyg=, tarball: '@csstools/media-query-list-parser/download/@csstools/media-query-list-parser-2.1.2.tgz'}
+    engines: {node: ^14 || ^16 || >=18}
+    peerDependencies:
+      '@csstools/css-parser-algorithms': ^2.3.0
+      '@csstools/css-tokenizer': ^2.1.1
+    dependencies:
+      '@csstools/css-parser-algorithms': 2.3.0(@csstools/css-tokenizer@2.1.1)
+      '@csstools/css-tokenizer': 2.1.1
+    dev: true
+
+  /@csstools/postcss-cascade-layers@4.0.0:
+    resolution: {integrity: sha1-IfhVbeZA+fnM+5UMSaiGKA/lSX4=, tarball: '@csstools/postcss-cascade-layers/download/@csstools/postcss-cascade-layers-4.0.0.tgz'}
+    engines: {node: ^14 || ^16 || >=18}
+    peerDependencies:
+      postcss: ^8.4
+    dependencies:
+      '@csstools/selector-specificity': 3.0.0(postcss-selector-parser@6.0.13)
+      postcss-selector-parser: 6.0.13
+    dev: true
+
+  /@csstools/postcss-color-function@2.2.3:
+    resolution: {integrity: sha1-wVVGw8xgQSkwJM2qfXmYo0D4jDk=, tarball: '@csstools/postcss-color-function/download/@csstools/postcss-color-function-2.2.3.tgz'}
+    engines: {node: ^14 || ^16 || >=18}
+    peerDependencies:
+      postcss: ^8.4
+    dependencies:
+      '@csstools/css-color-parser': 1.2.2(@csstools/css-parser-algorithms@2.3.0)(@csstools/css-tokenizer@2.1.1)
+      '@csstools/css-parser-algorithms': 2.3.0(@csstools/css-tokenizer@2.1.1)
+      '@csstools/css-tokenizer': 2.1.1
+      '@csstools/postcss-progressive-custom-properties': 2.3.0
+    dev: true
+
+  /@csstools/postcss-color-mix-function@1.0.3:
+    resolution: {integrity: sha1-N1WJS9igT4JzkydxdwBJej8vb3M=, tarball: '@csstools/postcss-color-mix-function/download/@csstools/postcss-color-mix-function-1.0.3.tgz'}
+    engines: {node: ^14 || ^16 || >=18}
+    peerDependencies:
+      postcss: ^8.4
+    dependencies:
+      '@csstools/css-color-parser': 1.2.2(@csstools/css-parser-algorithms@2.3.0)(@csstools/css-tokenizer@2.1.1)
+      '@csstools/css-parser-algorithms': 2.3.0(@csstools/css-tokenizer@2.1.1)
+      '@csstools/css-tokenizer': 2.1.1
+      '@csstools/postcss-progressive-custom-properties': 2.3.0
+    dev: true
+
+  /@csstools/postcss-font-format-keywords@3.0.0:
+    resolution: {integrity: sha1-nKOjymcSKGKt34ocDGGm2wLeocw=, tarball: '@csstools/postcss-font-format-keywords/download/@csstools/postcss-font-format-keywords-3.0.0.tgz'}
+    engines: {node: ^14 || ^16 || >=18}
+    peerDependencies:
+      postcss: ^8.4
+    dependencies:
+      postcss-value-parser: 4.2.0
+    dev: true
+
+  /@csstools/postcss-gradients-interpolation-method@4.0.0:
+    resolution: {integrity: sha1-rAoosKnimahie+iumq1tbqpIeoQ=, tarball: '@csstools/postcss-gradients-interpolation-method/download/@csstools/postcss-gradients-interpolation-method-4.0.0.tgz'}
+    engines: {node: ^14 || ^16 || >=18}
+    peerDependencies:
+      postcss: ^8.4
+    dependencies:
+      '@csstools/css-color-parser': 1.2.2(@csstools/css-parser-algorithms@2.3.0)(@csstools/css-tokenizer@2.1.1)
+      '@csstools/css-parser-algorithms': 2.3.0(@csstools/css-tokenizer@2.1.1)
+      '@csstools/css-tokenizer': 2.1.1
+      '@csstools/postcss-progressive-custom-properties': 3.0.0
+    dev: true
+
+  /@csstools/postcss-hwb-function@3.0.0:
+    resolution: {integrity: sha1-rzHkEuzypv0l29nEuGyjYjKNkUw=, tarball: '@csstools/postcss-hwb-function/download/@csstools/postcss-hwb-function-3.0.0.tgz'}
+    engines: {node: ^14 || ^16 || >=18}
+    peerDependencies:
+      postcss: ^8.4
+    dependencies:
+      '@csstools/css-color-parser': 1.2.2(@csstools/css-parser-algorithms@2.3.0)(@csstools/css-tokenizer@2.1.1)
+      '@csstools/css-parser-algorithms': 2.3.0(@csstools/css-tokenizer@2.1.1)
+      '@csstools/css-tokenizer': 2.1.1
+    dev: true
+
+  /@csstools/postcss-ic-unit@3.0.0:
+    resolution: {integrity: sha1-u8VRcNiA2qPMCW7hYOjySSpI6IE=, tarball: '@csstools/postcss-ic-unit/download/@csstools/postcss-ic-unit-3.0.0.tgz'}
+    engines: {node: ^14 || ^16 || >=18}
+    peerDependencies:
+      postcss: ^8.4
+    dependencies:
+      '@csstools/postcss-progressive-custom-properties': 3.0.0
+      postcss-value-parser: 4.2.0
+    dev: true
+
+  /@csstools/postcss-is-pseudo-class@4.0.0:
+    resolution: {integrity: sha1-lUxInPIHp8/q9NltOfrFB1fcSM8=, tarball: '@csstools/postcss-is-pseudo-class/download/@csstools/postcss-is-pseudo-class-4.0.0.tgz'}
+    engines: {node: ^14 || ^16 || >=18}
+    peerDependencies:
+      postcss: ^8.4
+    dependencies:
+      '@csstools/selector-specificity': 3.0.0(postcss-selector-parser@6.0.13)
+      postcss-selector-parser: 6.0.13
+    dev: true
+
+  /@csstools/postcss-logical-float-and-clear@2.0.0:
+    resolution: {integrity: sha1-FeG10W3OAa0eZ2Fn0JCeOVgjTrU=, tarball: '@csstools/postcss-logical-float-and-clear/download/@csstools/postcss-logical-float-and-clear-2.0.0.tgz'}
+    engines: {node: ^14 || ^16 || >=18}
+    peerDependencies:
+      postcss: ^8.4
+    dev: true
+
+  /@csstools/postcss-logical-resize@2.0.0:
+    resolution: {integrity: sha1-dRvVqrM1yZc+NG4+2ssqChb6gpY=, tarball: '@csstools/postcss-logical-resize/download/@csstools/postcss-logical-resize-2.0.0.tgz'}
+    engines: {node: ^14 || ^16 || >=18}
+    peerDependencies:
+      postcss: ^8.4
+    dependencies:
+      postcss-value-parser: 4.2.0
+    dev: true
+
+  /@csstools/postcss-logical-viewport-units@2.0.0:
+    resolution: {integrity: sha1-9W3dzzarGTygKqamER2B4tnOipw=, tarball: '@csstools/postcss-logical-viewport-units/download/@csstools/postcss-logical-viewport-units-2.0.0.tgz'}
+    engines: {node: ^14 || ^16 || >=18}
+    peerDependencies:
+      postcss: ^8.4
+    dependencies:
+      '@csstools/css-tokenizer': 2.1.1
+    dev: true
+
+  /@csstools/postcss-media-minmax@1.0.5:
+    resolution: {integrity: sha1-SmRbTqFmNEEoRc2uWPt9rPxJGP4=, tarball: '@csstools/postcss-media-minmax/download/@csstools/postcss-media-minmax-1.0.5.tgz'}
+    engines: {node: ^14 || ^16 || >=18}
+    peerDependencies:
+      postcss: ^8.4
+    dependencies:
+      '@csstools/css-calc': 1.1.2(@csstools/css-parser-algorithms@2.3.0)(@csstools/css-tokenizer@2.1.1)
+      '@csstools/css-parser-algorithms': 2.3.0(@csstools/css-tokenizer@2.1.1)
+      '@csstools/css-tokenizer': 2.1.1
+      '@csstools/media-query-list-parser': 2.1.2(@csstools/css-parser-algorithms@2.3.0)(@csstools/css-tokenizer@2.1.1)
+    dev: true
+
+  /@csstools/postcss-media-queries-aspect-ratio-number-values@2.0.0:
+    resolution: {integrity: sha1-4Ena4cheacyE6F+vK8rKXg2IE9o=, tarball: '@csstools/postcss-media-queries-aspect-ratio-number-values/download/@csstools/postcss-media-queries-aspect-ratio-number-values-2.0.0.tgz'}
+    engines: {node: ^14 || ^16 || >=18}
+    peerDependencies:
+      postcss: ^8.4
+    dependencies:
+      '@csstools/css-parser-algorithms': 2.3.0(@csstools/css-tokenizer@2.1.1)
+      '@csstools/css-tokenizer': 2.1.1
+      '@csstools/media-query-list-parser': 2.1.2(@csstools/css-parser-algorithms@2.3.0)(@csstools/css-tokenizer@2.1.1)
+    dev: true
+
+  /@csstools/postcss-nested-calc@3.0.0:
+    resolution: {integrity: sha1-uQafXhwuoI3jhApZIuOa9ODs9LE=, tarball: '@csstools/postcss-nested-calc/download/@csstools/postcss-nested-calc-3.0.0.tgz'}
+    engines: {node: ^14 || ^16 || >=18}
+    peerDependencies:
+      postcss: ^8.4
+    dependencies:
+      postcss-value-parser: 4.2.0
+    dev: true
+
+  /@csstools/postcss-normalize-display-values@3.0.0:
+    resolution: {integrity: sha1-3ple6v4hesGFSnE1sdtExXSH6eo=, tarball: '@csstools/postcss-normalize-display-values/download/@csstools/postcss-normalize-display-values-3.0.0.tgz'}
+    engines: {node: ^14 || ^16 || >=18}
+    peerDependencies:
+      postcss: ^8.4
+    dependencies:
+      postcss-value-parser: 4.2.0
+    dev: true
+
+  /@csstools/postcss-oklab-function@3.0.0:
+    resolution: {integrity: sha1-mJ8cpUB7lbWiPKX9ZcoyQnCQQuI=, tarball: '@csstools/postcss-oklab-function/download/@csstools/postcss-oklab-function-3.0.0.tgz'}
+    engines: {node: ^14 || ^16 || >=18}
+    peerDependencies:
+      postcss: ^8.4
+    dependencies:
+      '@csstools/css-color-parser': 1.2.2(@csstools/css-parser-algorithms@2.3.0)(@csstools/css-tokenizer@2.1.1)
+      '@csstools/css-parser-algorithms': 2.3.0(@csstools/css-tokenizer@2.1.1)
+      '@csstools/css-tokenizer': 2.1.1
+      '@csstools/postcss-progressive-custom-properties': 3.0.0
+    dev: true
+
+  /@csstools/postcss-progressive-custom-properties@2.3.0:
+    resolution: {integrity: sha1-wWrV/ZiTE278hE6GfoD0vs2yI9k=, tarball: '@csstools/postcss-progressive-custom-properties/download/@csstools/postcss-progressive-custom-properties-2.3.0.tgz'}
+    engines: {node: ^14 || ^16 || >=18}
+    peerDependencies:
+      postcss: ^8.4
+    dependencies:
+      postcss-value-parser: 4.2.0
+    dev: true
+
+  /@csstools/postcss-progressive-custom-properties@3.0.0:
+    resolution: {integrity: sha1-u4auS7fyIGsM9um48L/BkfZycdg=, tarball: '@csstools/postcss-progressive-custom-properties/download/@csstools/postcss-progressive-custom-properties-3.0.0.tgz'}
+    engines: {node: ^14 || ^16 || >=18}
+    peerDependencies:
+      postcss: ^8.4
+    dependencies:
+      postcss-value-parser: 4.2.0
+    dev: true
+
+  /@csstools/postcss-relative-color-syntax@2.0.0:
+    resolution: {integrity: sha1-ldUh4eBV7xYu8OfQUbHzxlShPKg=, tarball: '@csstools/postcss-relative-color-syntax/download/@csstools/postcss-relative-color-syntax-2.0.0.tgz'}
+    engines: {node: ^14 || ^16 || >=18}
+    peerDependencies:
+      postcss: ^8.4
+    dependencies:
+      '@csstools/css-color-parser': 1.2.2(@csstools/css-parser-algorithms@2.3.0)(@csstools/css-tokenizer@2.1.1)
+      '@csstools/css-parser-algorithms': 2.3.0(@csstools/css-tokenizer@2.1.1)
+      '@csstools/css-tokenizer': 2.1.1
+      '@csstools/postcss-progressive-custom-properties': 3.0.0
+    dev: true
+
+  /@csstools/postcss-scope-pseudo-class@3.0.0:
+    resolution: {integrity: sha1-I/MhgbfemjPnx8cfdiC3goSVW4I=, tarball: '@csstools/postcss-scope-pseudo-class/download/@csstools/postcss-scope-pseudo-class-3.0.0.tgz'}
+    engines: {node: ^14 || ^16 || >=18}
+    peerDependencies:
+      postcss: ^8.4
+    dependencies:
+      postcss-selector-parser: 6.0.13
+    dev: true
+
+  /@csstools/postcss-stepped-value-functions@3.0.0:
+    resolution: {integrity: sha1-SzFRkPhgOD0BZ0hPh1hTX5MD8no=, tarball: '@csstools/postcss-stepped-value-functions/download/@csstools/postcss-stepped-value-functions-3.0.0.tgz'}
+    engines: {node: ^14 || ^16 || >=18}
+    peerDependencies:
+      postcss: ^8.4
+    dependencies:
+      '@csstools/css-calc': 1.1.2(@csstools/css-parser-algorithms@2.3.0)(@csstools/css-tokenizer@2.1.1)
+      '@csstools/css-parser-algorithms': 2.3.0(@csstools/css-tokenizer@2.1.1)
+      '@csstools/css-tokenizer': 2.1.1
+    dev: true
+
+  /@csstools/postcss-text-decoration-shorthand@3.0.0:
+    resolution: {integrity: sha1-RogApH/LR2DfjGC78bp5mfRLTdQ=, tarball: '@csstools/postcss-text-decoration-shorthand/download/@csstools/postcss-text-decoration-shorthand-3.0.0.tgz'}
+    engines: {node: ^14 || ^16 || >=18}
+    peerDependencies:
+      postcss: ^8.4
+    dependencies:
+      '@csstools/color-helpers': 3.0.0
+      postcss-value-parser: 4.2.0
+    dev: true
+
+  /@csstools/postcss-trigonometric-functions@3.0.0:
+    resolution: {integrity: sha1-CVCPSaV2JlWPfWKD5mGuUoPW1T0=, tarball: '@csstools/postcss-trigonometric-functions/download/@csstools/postcss-trigonometric-functions-3.0.0.tgz'}
+    engines: {node: ^14 || ^16 || >=18}
+    peerDependencies:
+      postcss: ^8.4
+    dependencies:
+      '@csstools/css-calc': 1.1.2(@csstools/css-parser-algorithms@2.3.0)(@csstools/css-tokenizer@2.1.1)
+      '@csstools/css-parser-algorithms': 2.3.0(@csstools/css-tokenizer@2.1.1)
+      '@csstools/css-tokenizer': 2.1.1
+    dev: true
+
+  /@csstools/postcss-unset-value@3.0.0:
+    resolution: {integrity: sha1-bS8IFAtB0+cNgFzNK6r2Sm9Z/aw=, tarball: '@csstools/postcss-unset-value/download/@csstools/postcss-unset-value-3.0.0.tgz'}
+    engines: {node: ^14 || ^16 || >=18}
+    peerDependencies:
+      postcss: ^8.4
+    dev: true
+
+  /@csstools/selector-specificity@3.0.0(postcss-selector-parser@6.0.13):
+    resolution: {integrity: sha1-eYYiVGtjhH6COJ5HP9Z/JwfYIkc=, tarball: '@csstools/selector-specificity/download/@csstools/selector-specificity-3.0.0.tgz'}
+    engines: {node: ^14 || ^16 || >=18}
+    peerDependencies:
+      postcss-selector-parser: ^6.0.13
+    dependencies:
+      postcss-selector-parser: 6.0.13
+    dev: true
+
+  /@esbuild/android-arm64@0.18.13:
+    resolution: {integrity: sha1-cO9FVFVlTHgAwxrlWuKV2BcSI4w=, tarball: '@esbuild/android-arm64/download/@esbuild/android-arm64-0.18.13.tgz'}
     engines: {node: '>=12'}
     cpu: [arm64]
     os: [android]
@@ -26,10 +346,8 @@ packages:
     dev: true
     optional: true
 
-  registry.npmmirror.com/@esbuild/android-arm@0.18.13:
-    resolution: {integrity: sha512-KwqFhxRFMKZINHzCqf8eKxE0XqWlAVPRxwy6rc7CbVFxzUWB2sA/s3hbMZeemPdhN3fKBkqOaFhTbS8xJXYIWQ==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@esbuild/android-arm/-/android-arm-0.18.13.tgz}
-    name: '@esbuild/android-arm'
-    version: 0.18.13
+  /@esbuild/android-arm@0.18.13:
+    resolution: {integrity: sha1-FduDCZhV/EGTZYpAaHiT7lyV16k=, tarball: '@esbuild/android-arm/download/@esbuild/android-arm-0.18.13.tgz'}
     engines: {node: '>=12'}
     cpu: [arm]
     os: [android]
@@ -37,10 +355,8 @@ packages:
     dev: true
     optional: true
 
-  registry.npmmirror.com/@esbuild/android-x64@0.18.13:
-    resolution: {integrity: sha512-M2eZkRxR6WnWfVELHmv6MUoHbOqnzoTVSIxgtsyhm/NsgmL+uTmag/VVzdXvmahak1I6sOb1K/2movco5ikDJg==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@esbuild/android-x64/-/android-x64-0.18.13.tgz}
-    name: '@esbuild/android-x64'
-    version: 0.18.13
+  /@esbuild/android-x64@0.18.13:
+    resolution: {integrity: sha1-Rz1YkhnhwG4wXPYcp3uPadm2/6s=, tarball: '@esbuild/android-x64/download/@esbuild/android-x64-0.18.13.tgz'}
     engines: {node: '>=12'}
     cpu: [x64]
     os: [android]
@@ -48,10 +364,8 @@ packages:
     dev: true
     optional: true
 
-  registry.npmmirror.com/@esbuild/darwin-arm64@0.18.13:
-    resolution: {integrity: sha512-f5goG30YgR1GU+fxtaBRdSW3SBG9pZW834Mmhxa6terzcboz7P2R0k4lDxlkP7NYRIIdBbWp+VgwQbmMH4yV7w==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@esbuild/darwin-arm64/-/darwin-arm64-0.18.13.tgz}
-    name: '@esbuild/darwin-arm64'
-    version: 0.18.13
+  /@esbuild/darwin-arm64@0.18.13:
+    resolution: {integrity: sha1-D1JbLBghoFkaBpY1guXcdJulHUU=, tarball: '@esbuild/darwin-arm64/download/@esbuild/darwin-arm64-0.18.13.tgz'}
     engines: {node: '>=12'}
     cpu: [arm64]
     os: [darwin]
@@ -59,10 +373,8 @@ packages:
     dev: true
     optional: true
 
-  registry.npmmirror.com/@esbuild/darwin-x64@0.18.13:
-    resolution: {integrity: sha512-RIrxoKH5Eo+yE5BtaAIMZaiKutPhZjw+j0OCh8WdvKEKJQteacq0myZvBDLU+hOzQOZWJeDnuQ2xgSScKf1Ovw==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@esbuild/darwin-x64/-/darwin-x64-0.18.13.tgz}
-    name: '@esbuild/darwin-x64'
-    version: 0.18.13
+  /@esbuild/darwin-x64@0.18.13:
+    resolution: {integrity: sha1-gZZbaQuuhr8SibLOBzJQb9QftUU=, tarball: '@esbuild/darwin-x64/download/@esbuild/darwin-x64-0.18.13.tgz'}
     engines: {node: '>=12'}
     cpu: [x64]
     os: [darwin]
@@ -70,10 +382,8 @@ packages:
     dev: true
     optional: true
 
-  registry.npmmirror.com/@esbuild/freebsd-arm64@0.18.13:
-    resolution: {integrity: sha512-AfRPhHWmj9jGyLgW/2FkYERKmYR+IjYxf2rtSLmhOrPGFh0KCETFzSjx/JX/HJnvIqHt/DRQD/KAaVsUKoI3Xg==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@esbuild/freebsd-arm64/-/freebsd-arm64-0.18.13.tgz}
-    name: '@esbuild/freebsd-arm64'
-    version: 0.18.13
+  /@esbuild/freebsd-arm64@0.18.13:
+    resolution: {integrity: sha1-iVuzf96ohtsJVJEZFY4ETxRoYfA=, tarball: '@esbuild/freebsd-arm64/download/@esbuild/freebsd-arm64-0.18.13.tgz'}
     engines: {node: '>=12'}
     cpu: [arm64]
     os: [freebsd]
@@ -81,10 +391,8 @@ packages:
     dev: true
     optional: true
 
-  registry.npmmirror.com/@esbuild/freebsd-x64@0.18.13:
-    resolution: {integrity: sha512-pGzWWZJBInhIgdEwzn8VHUBang8UvFKsvjDkeJ2oyY5gZtAM6BaxK0QLCuZY+qoj/nx/lIaItH425rm/hloETA==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@esbuild/freebsd-x64/-/freebsd-x64-0.18.13.tgz}
-    name: '@esbuild/freebsd-x64'
-    version: 0.18.13
+  /@esbuild/freebsd-x64@0.18.13:
+    resolution: {integrity: sha1-Cx394/8bGPA/ceRg+R3EY+aiOQM=, tarball: '@esbuild/freebsd-x64/download/@esbuild/freebsd-x64-0.18.13.tgz'}
     engines: {node: '>=12'}
     cpu: [x64]
     os: [freebsd]
@@ -92,10 +400,8 @@ packages:
     dev: true
     optional: true
 
-  registry.npmmirror.com/@esbuild/linux-arm64@0.18.13:
-    resolution: {integrity: sha512-hCzZbVJEHV7QM77fHPv2qgBcWxgglGFGCxk6KfQx6PsVIdi1u09X7IvgE9QKqm38OpkzaAkPnnPqwRsltvLkIQ==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@esbuild/linux-arm64/-/linux-arm64-0.18.13.tgz}
-    name: '@esbuild/linux-arm64'
-    version: 0.18.13
+  /@esbuild/linux-arm64@0.18.13:
+    resolution: {integrity: sha1-NQ/r7V0y2OwaQkpMTXybqIVgSWA=, tarball: '@esbuild/linux-arm64/download/@esbuild/linux-arm64-0.18.13.tgz'}
     engines: {node: '>=12'}
     cpu: [arm64]
     os: [linux]
@@ -103,10 +409,8 @@ packages:
     dev: true
     optional: true
 
-  registry.npmmirror.com/@esbuild/linux-arm@0.18.13:
-    resolution: {integrity: sha512-4iMxLRMCxGyk7lEvkkvrxw4aJeC93YIIrfbBlUJ062kilUUnAiMb81eEkVvCVoh3ON283ans7+OQkuy1uHW+Hw==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@esbuild/linux-arm/-/linux-arm-0.18.13.tgz}
-    name: '@esbuild/linux-arm'
-    version: 0.18.13
+  /@esbuild/linux-arm@0.18.13:
+    resolution: {integrity: sha1-R2Odc9iUAmNQ6sz3wXTx0mt0fWo=, tarball: '@esbuild/linux-arm/download/@esbuild/linux-arm-0.18.13.tgz'}
     engines: {node: '>=12'}
     cpu: [arm]
     os: [linux]
@@ -114,10 +418,8 @@ packages:
     dev: true
     optional: true
 
-  registry.npmmirror.com/@esbuild/linux-ia32@0.18.13:
-    resolution: {integrity: sha512-I3OKGbynl3AAIO6onXNrup/ttToE6Rv2XYfFgLK/wnr2J+1g+7k4asLrE+n7VMhaqX+BUnyWkCu27rl+62Adug==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@esbuild/linux-ia32/-/linux-ia32-0.18.13.tgz}
-    name: '@esbuild/linux-ia32'
-    version: 0.18.13
+  /@esbuild/linux-ia32@0.18.13:
+    resolution: {integrity: sha1-qQGhY0nFi/b4c7ztNr30al9NrF0=, tarball: '@esbuild/linux-ia32/download/@esbuild/linux-ia32-0.18.13.tgz'}
     engines: {node: '>=12'}
     cpu: [ia32]
     os: [linux]
@@ -125,10 +427,8 @@ packages:
     dev: true
     optional: true
 
-  registry.npmmirror.com/@esbuild/linux-loong64@0.18.13:
-    resolution: {integrity: sha512-8pcKDApAsKc6WW51ZEVidSGwGbebYw2qKnO1VyD8xd6JN0RN6EUXfhXmDk9Vc4/U3Y4AoFTexQewQDJGsBXBpg==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@esbuild/linux-loong64/-/linux-loong64-0.18.13.tgz}
-    name: '@esbuild/linux-loong64'
-    version: 0.18.13
+  /@esbuild/linux-loong64@0.14.54:
+    resolution: {integrity: sha1-3ipL5ni9TQ0f+7hubed5zeWZkCg=, tarball: '@esbuild/linux-loong64/download/@esbuild/linux-loong64-0.14.54.tgz'}
     engines: {node: '>=12'}
     cpu: [loong64]
     os: [linux]
@@ -136,10 +436,17 @@ packages:
     dev: true
     optional: true
 
-  registry.npmmirror.com/@esbuild/linux-mips64el@0.18.13:
-    resolution: {integrity: sha512-6GU+J1PLiVqWx8yoCK4Z0GnfKyCGIH5L2KQipxOtbNPBs+qNDcMJr9euxnyJ6FkRPyMwaSkjejzPSISD9hb+gg==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@esbuild/linux-mips64el/-/linux-mips64el-0.18.13.tgz}
-    name: '@esbuild/linux-mips64el'
-    version: 0.18.13
+  /@esbuild/linux-loong64@0.18.13:
+    resolution: {integrity: sha1-+qCNtALBjjUSNHGeAKupiGeqNM4=, tarball: '@esbuild/linux-loong64/download/@esbuild/linux-loong64-0.18.13.tgz'}
+    engines: {node: '>=12'}
+    cpu: [loong64]
+    os: [linux]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /@esbuild/linux-mips64el@0.18.13:
+    resolution: {integrity: sha1-ISOlS0ndwaHf8Fe7qKml6fJuUAk=, tarball: '@esbuild/linux-mips64el/download/@esbuild/linux-mips64el-0.18.13.tgz'}
     engines: {node: '>=12'}
     cpu: [mips64el]
     os: [linux]
@@ -147,10 +454,8 @@ packages:
     dev: true
     optional: true
 
-  registry.npmmirror.com/@esbuild/linux-ppc64@0.18.13:
-    resolution: {integrity: sha512-pfn/OGZ8tyR8YCV7MlLl5hAit2cmS+j/ZZg9DdH0uxdCoJpV7+5DbuXrR+es4ayRVKIcfS9TTMCs60vqQDmh+w==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@esbuild/linux-ppc64/-/linux-ppc64-0.18.13.tgz}
-    name: '@esbuild/linux-ppc64'
-    version: 0.18.13
+  /@esbuild/linux-ppc64@0.18.13:
+    resolution: {integrity: sha1-mpvv0nWmo/W67tiaqvt0bfe6c10=, tarball: '@esbuild/linux-ppc64/download/@esbuild/linux-ppc64-0.18.13.tgz'}
     engines: {node: '>=12'}
     cpu: [ppc64]
     os: [linux]
@@ -158,10 +463,8 @@ packages:
     dev: true
     optional: true
 
-  registry.npmmirror.com/@esbuild/linux-riscv64@0.18.13:
-    resolution: {integrity: sha512-aIbhU3LPg0lOSCfVeGHbmGYIqOtW6+yzO+Nfv57YblEK01oj0mFMtvDJlOaeAZ6z0FZ9D13oahi5aIl9JFphGg==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@esbuild/linux-riscv64/-/linux-riscv64-0.18.13.tgz}
-    name: '@esbuild/linux-riscv64'
-    version: 0.18.13
+  /@esbuild/linux-riscv64@0.18.13:
+    resolution: {integrity: sha1-ZkSltYQPoMP/reb4fZQ0E+zlIKg=, tarball: '@esbuild/linux-riscv64/download/@esbuild/linux-riscv64-0.18.13.tgz'}
     engines: {node: '>=12'}
     cpu: [riscv64]
     os: [linux]
@@ -169,10 +472,8 @@ packages:
     dev: true
     optional: true
 
-  registry.npmmirror.com/@esbuild/linux-s390x@0.18.13:
-    resolution: {integrity: sha512-Pct1QwF2sp+5LVi4Iu5Y+6JsGaV2Z2vm4O9Dd7XZ5tKYxEHjFtb140fiMcl5HM1iuv6xXO8O1Vrb1iJxHlv8UA==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@esbuild/linux-s390x/-/linux-s390x-0.18.13.tgz}
-    name: '@esbuild/linux-s390x'
-    version: 0.18.13
+  /@esbuild/linux-s390x@0.18.13:
+    resolution: {integrity: sha1-wTZ6CgKzf2sDgucdnJ2XNSyiMBM=, tarball: '@esbuild/linux-s390x/download/@esbuild/linux-s390x-0.18.13.tgz'}
     engines: {node: '>=12'}
     cpu: [s390x]
     os: [linux]
@@ -180,10 +481,8 @@ packages:
     dev: true
     optional: true
 
-  registry.npmmirror.com/@esbuild/linux-x64@0.18.13:
-    resolution: {integrity: sha512-zTrIP0KzYP7O0+3ZnmzvUKgGtUvf4+piY8PIO3V8/GfmVd3ZyHJGz7Ht0np3P1wz+I8qJ4rjwJKqqEAbIEPngA==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@esbuild/linux-x64/-/linux-x64-0.18.13.tgz}
-    name: '@esbuild/linux-x64'
-    version: 0.18.13
+  /@esbuild/linux-x64@0.18.13:
+    resolution: {integrity: sha1-iSZ08JGO4/XlIycM9JpppVf7ZMA=, tarball: '@esbuild/linux-x64/download/@esbuild/linux-x64-0.18.13.tgz'}
     engines: {node: '>=12'}
     cpu: [x64]
     os: [linux]
@@ -191,10 +490,8 @@ packages:
     dev: true
     optional: true
 
-  registry.npmmirror.com/@esbuild/netbsd-x64@0.18.13:
-    resolution: {integrity: sha512-I6zs10TZeaHDYoGxENuksxE1sxqZpCp+agYeW039yqFwh3MgVvdmXL5NMveImOC6AtpLvE4xG5ujVic4NWFIDQ==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@esbuild/netbsd-x64/-/netbsd-x64-0.18.13.tgz}
-    name: '@esbuild/netbsd-x64'
-    version: 0.18.13
+  /@esbuild/netbsd-x64@0.18.13:
+    resolution: {integrity: sha1-Z5VCkhley9rjOrCamuan9WbknQQ=, tarball: '@esbuild/netbsd-x64/download/@esbuild/netbsd-x64-0.18.13.tgz'}
     engines: {node: '>=12'}
     cpu: [x64]
     os: [netbsd]
@@ -202,10 +499,8 @@ packages:
     dev: true
     optional: true
 
-  registry.npmmirror.com/@esbuild/openbsd-x64@0.18.13:
-    resolution: {integrity: sha512-W5C5nczhrt1y1xPG5bV+0M12p2vetOGlvs43LH8SopQ3z2AseIROu09VgRqydx5qFN7y9qCbpgHLx0kb0TcW7g==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@esbuild/openbsd-x64/-/openbsd-x64-0.18.13.tgz}
-    name: '@esbuild/openbsd-x64'
-    version: 0.18.13
+  /@esbuild/openbsd-x64@0.18.13:
+    resolution: {integrity: sha1-s+74c9+rVH++e82zVz4cWd6mdrc=, tarball: '@esbuild/openbsd-x64/download/@esbuild/openbsd-x64-0.18.13.tgz'}
     engines: {node: '>=12'}
     cpu: [x64]
     os: [openbsd]
@@ -213,10 +508,8 @@ packages:
     dev: true
     optional: true
 
-  registry.npmmirror.com/@esbuild/sunos-x64@0.18.13:
-    resolution: {integrity: sha512-X/xzuw4Hzpo/yq3YsfBbIsipNgmsm8mE/QeWbdGdTTeZ77fjxI2K0KP3AlhZ6gU3zKTw1bKoZTuKLnqcJ537qw==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@esbuild/sunos-x64/-/sunos-x64-0.18.13.tgz}
-    name: '@esbuild/sunos-x64'
-    version: 0.18.13
+  /@esbuild/sunos-x64@0.18.13:
+    resolution: {integrity: sha1-s2gID0Lbta6SbQVnwCvNaKNMXv0=, tarball: '@esbuild/sunos-x64/download/@esbuild/sunos-x64-0.18.13.tgz'}
     engines: {node: '>=12'}
     cpu: [x64]
     os: [sunos]
@@ -224,10 +517,8 @@ packages:
     dev: true
     optional: true
 
-  registry.npmmirror.com/@esbuild/win32-arm64@0.18.13:
-    resolution: {integrity: sha512-4CGYdRQT/ILd+yLLE5i4VApMPfGE0RPc/wFQhlluDQCK09+b4JDbxzzjpgQqTPrdnP7r5KUtGVGZYclYiPuHrw==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@esbuild/win32-arm64/-/win32-arm64-0.18.13.tgz}
-    name: '@esbuild/win32-arm64'
-    version: 0.18.13
+  /@esbuild/win32-arm64@0.18.13:
+    resolution: {integrity: sha1-Ed7doOjPtfeBQR6jYrIEAwS+D8M=, tarball: '@esbuild/win32-arm64/download/@esbuild/win32-arm64-0.18.13.tgz'}
     engines: {node: '>=12'}
     cpu: [arm64]
     os: [win32]
@@ -235,10 +526,8 @@ packages:
     dev: true
     optional: true
 
-  registry.npmmirror.com/@esbuild/win32-ia32@0.18.13:
-    resolution: {integrity: sha512-D+wKZaRhQI+MUGMH+DbEr4owC2D7XnF+uyGiZk38QbgzLcofFqIOwFs7ELmIeU45CQgfHNy9Q+LKW3cE8g37Kg==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@esbuild/win32-ia32/-/win32-ia32-0.18.13.tgz}
-    name: '@esbuild/win32-ia32'
-    version: 0.18.13
+  /@esbuild/win32-ia32@0.18.13:
+    resolution: {integrity: sha1-a4qpVRXAWCe3wkyduVgZQ1ZuDcs=, tarball: '@esbuild/win32-ia32/download/@esbuild/win32-ia32-0.18.13.tgz'}
     engines: {node: '>=12'}
     cpu: [ia32]
     os: [win32]
@@ -246,16 +535,853 @@ packages:
     dev: true
     optional: true
 
-  registry.npmmirror.com/@esbuild/win32-x64@0.18.13:
-    resolution: {integrity: sha512-iVl6lehAfJS+VmpF3exKpNQ8b0eucf5VWfzR8S7xFve64NBNz2jPUgx1X93/kfnkfgP737O+i1k54SVQS7uVZA==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@esbuild/win32-x64/-/win32-x64-0.18.13.tgz}
-    name: '@esbuild/win32-x64'
-    version: 0.18.13
+  /@esbuild/win32-x64@0.18.13:
+    resolution: {integrity: sha1-Ax9psfTPYqGMONUCRYwLiwJiVGE=, tarball: '@esbuild/win32-x64/download/@esbuild/win32-x64-0.18.13.tgz'}
     engines: {node: '>=12'}
     cpu: [x64]
     os: [win32]
     requiresBuild: true
     dev: true
     optional: true
+
+  /anymatch@3.1.3:
+    resolution: {integrity: sha1-eQxYsZuhcgqEIFtXxhjVrYUklz4=, tarball: anymatch/download/anymatch-3.1.3.tgz}
+    engines: {node: '>= 8'}
+    dependencies:
+      normalize-path: 3.0.0
+      picomatch: 2.3.1
+    dev: true
+
+  /autoprefixer@10.4.14:
+    resolution: {integrity: sha1-4o1JkC+OdZ3SWxUyZOhi3ycF950=, tarball: autoprefixer/download/autoprefixer-10.4.14.tgz}
+    engines: {node: ^10 || ^12 || >=14}
+    hasBin: true
+    peerDependencies:
+      postcss: ^8.1.0
+    dependencies:
+      browserslist: 4.21.9
+      caniuse-lite: 1.0.30001511
+      fraction.js: 4.2.0
+      normalize-range: 0.1.2
+      picocolors: 1.0.0
+      postcss-value-parser: 4.2.0
+    dev: true
+
+  /binary-extensions@2.2.0:
+    resolution: {integrity: sha1-dfUC7q+f/eQvyYgpZFvk6na9ni0=, tarball: binary-extensions/download/binary-extensions-2.2.0.tgz}
+    engines: {node: '>=8'}
+    dev: true
+
+  /braces@3.0.2:
+    resolution: {integrity: sha1-NFThpGLujVmeI23zNs2epPiv4Qc=, tarball: braces/download/braces-3.0.2.tgz}
+    engines: {node: '>=8'}
+    dependencies:
+      fill-range: 7.0.1
+    dev: true
+
+  /browserslist@4.21.9:
+    resolution: {integrity: sha1-4RvdPDE9fiqeh+i0sMeHKxOJdjU=, tarball: browserslist/download/browserslist-4.21.9.tgz}
+    engines: {node: ^6 || ^7 || ^8 || ^9 || ^10 || ^11 || ^12 || >=13.7}
+    hasBin: true
+    dependencies:
+      caniuse-lite: 1.0.30001511
+      electron-to-chromium: 1.4.434
+      node-releases: 2.0.12
+      update-browserslist-db: 1.0.11(browserslist@4.21.9)
+    dev: true
+
+  /caniuse-lite@1.0.30001511:
+    resolution: {integrity: sha1-5uKhYUJ1xvuOOs/XSow6cOU+0jM=, tarball: caniuse-lite/download/caniuse-lite-1.0.30001511.tgz}
+    dev: true
+
+  /chokidar@3.5.3:
+    resolution: {integrity: sha1-HPN8hwe5Mr0a8a4iwEMuKs0ZA70=, tarball: chokidar/download/chokidar-3.5.3.tgz}
+    engines: {node: '>= 8.10.0'}
+    dependencies:
+      anymatch: 3.1.3
+      braces: 3.0.2
+      glob-parent: 5.1.2
+      is-binary-path: 2.1.0
+      is-glob: 4.0.3
+      normalize-path: 3.0.0
+      readdirp: 3.6.0
+    optionalDependencies:
+      fsevents: 2.3.2
+    dev: true
+
+  /consola@2.15.3:
+    resolution: {integrity: sha1-LhH5jWpL5x/3LgvfB70j4Sy2FVA=, tarball: consola/download/consola-2.15.3.tgz}
+    dev: true
+
+  /css-blank-pseudo@6.0.0:
+    resolution: {integrity: sha1-K8b4EqX2ApbATFWxaWutQwDc28w=, tarball: css-blank-pseudo/download/css-blank-pseudo-6.0.0.tgz}
+    engines: {node: ^14 || ^16 || >=18}
+    peerDependencies:
+      postcss: ^8.4
+    dependencies:
+      postcss-selector-parser: 6.0.13
+    dev: true
+
+  /css-has-pseudo@6.0.0:
+    resolution: {integrity: sha1-uMjzmhm8g8W+Wf0lFRCn5EPEeWg=, tarball: css-has-pseudo/download/css-has-pseudo-6.0.0.tgz}
+    engines: {node: ^14 || ^16 || >=18}
+    peerDependencies:
+      postcss: ^8.4
+    dependencies:
+      '@csstools/selector-specificity': 3.0.0(postcss-selector-parser@6.0.13)
+      postcss-selector-parser: 6.0.13
+      postcss-value-parser: 4.2.0
+    dev: true
+
+  /css-prefers-color-scheme@9.0.0:
+    resolution: {integrity: sha1-fpt0BiZV6hVJDjWctFajufTJMyc=, tarball: css-prefers-color-scheme/download/css-prefers-color-scheme-9.0.0.tgz}
+    engines: {node: ^14 || ^16 || >=18}
+    peerDependencies:
+      postcss: ^8.4
+    dev: true
+
+  /cssdb@7.6.0:
+    resolution: {integrity: sha1-vqyPel9nbbYtPDPaUX70yesAj4s=, tarball: cssdb/download/cssdb-7.6.0.tgz}
+    dev: true
+
+  /cssesc@3.0.0:
+    resolution: {integrity: sha1-N3QZGZA7hoVl4cCep0dEXNGJg+4=, tarball: cssesc/download/cssesc-3.0.0.tgz}
+    engines: {node: '>=4'}
+    hasBin: true
+    dev: true
+
+  /electron-to-chromium@1.4.434:
+    resolution: {integrity: sha1-S973tbGNjawXfsDTHaufku6/IqE=, tarball: electron-to-chromium/download/electron-to-chromium-1.4.434.tgz}
+    dev: true
+
+  /esbuild-android-64@0.14.54:
+    resolution: {integrity: sha1-UF9BgyiEMTu6/7J3BLi8qi2GFr4=, tarball: esbuild-android-64/download/esbuild-android-64-0.14.54.tgz}
+    engines: {node: '>=12'}
+    cpu: [x64]
+    os: [android]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /esbuild-android-arm64@0.14.54:
+    resolution: {integrity: sha1-jOadfKuklkbgCZaP5XVKIamHF3E=, tarball: esbuild-android-arm64/download/esbuild-android-arm64-0.14.54.tgz}
+    engines: {node: '>=12'}
+    cpu: [arm64]
+    os: [android]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /esbuild-darwin-64@0.14.54:
+    resolution: {integrity: sha1-JLpnuajLiQo8CNkBj4h8wiHN2iU=, tarball: esbuild-darwin-64/download/esbuild-darwin-64-0.14.54.tgz}
+    engines: {node: '>=12'}
+    cpu: [x64]
+    os: [darwin]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /esbuild-darwin-arm64@0.14.54:
+    resolution: {integrity: sha1-P3zbeIiO4F5IjSUKK9qrH6Zxv3M=, tarball: esbuild-darwin-arm64/download/esbuild-darwin-arm64-0.14.54.tgz}
+    engines: {node: '>=12'}
+    cpu: [arm64]
+    os: [darwin]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /esbuild-freebsd-64@0.14.54:
+    resolution: {integrity: sha1-CSUPmXpW7UZQ8+GXnJBf/EC76U0=, tarball: esbuild-freebsd-64/download/esbuild-freebsd-64-0.14.54.tgz}
+    engines: {node: '>=12'}
+    cpu: [x64]
+    os: [freebsd]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /esbuild-freebsd-arm64@0.14.54:
+    resolution: {integrity: sha1-uvtG7QT8X5fL2wFthpR6eVefjkg=, tarball: esbuild-freebsd-arm64/download/esbuild-freebsd-arm64-0.14.54.tgz}
+    engines: {node: '>=12'}
+    cpu: [arm64]
+    os: [freebsd]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /esbuild-linux-32@0.14.54:
+    resolution: {integrity: sha1-4qjEqO/cNVQFMlAz/OvrlB94H+U=, tarball: esbuild-linux-32/download/esbuild-linux-32-0.14.54.tgz}
+    engines: {node: '>=12'}
+    cpu: [ia32]
+    os: [linux]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /esbuild-linux-64@0.14.54:
+    resolution: {integrity: sha1-3l/boclWZs9yNp9StAsDvnEiZlI=, tarball: esbuild-linux-64/download/esbuild-linux-64-0.14.54.tgz}
+    engines: {node: '>=12'}
+    cpu: [x64]
+    os: [linux]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /esbuild-linux-arm64@0.14.54:
+    resolution: {integrity: sha1-2uTNQq6Xh0aLalwVjaTIToOwzos=, tarball: esbuild-linux-arm64/download/esbuild-linux-arm64-0.14.54.tgz}
+    engines: {node: '>=12'}
+    cpu: [arm64]
+    os: [linux]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /esbuild-linux-arm@0.14.54:
+    resolution: {integrity: sha1-osHf9tDyHb6PxpmKEiZ1Uz3fzVk=, tarball: esbuild-linux-arm/download/esbuild-linux-arm-0.14.54.tgz}
+    engines: {node: '>=12'}
+    cpu: [arm]
+    os: [linux]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /esbuild-linux-mips64le@0.14.54:
+    resolution: {integrity: sha1-2ZGOnky5cvjW2ujoZVv57hMe2jQ=, tarball: esbuild-linux-mips64le/download/esbuild-linux-mips64le-0.14.54.tgz}
+    engines: {node: '>=12'}
+    cpu: [mips64el]
+    os: [linux]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /esbuild-linux-ppc64le@0.14.54:
+    resolution: {integrity: sha1-P5oPbUEHP7GmQGgIRcfeUplfE34=, tarball: esbuild-linux-ppc64le/download/esbuild-linux-ppc64le-0.14.54.tgz}
+    engines: {node: '>=12'}
+    cpu: [ppc64]
+    os: [linux]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /esbuild-linux-riscv64@0.14.54:
+    resolution: {integrity: sha1-YYhTwCgXimGDe8eZ0gE9RpXkUcg=, tarball: esbuild-linux-riscv64/download/esbuild-linux-riscv64-0.14.54.tgz}
+    engines: {node: '>=12'}
+    cpu: [riscv64]
+    os: [linux]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /esbuild-linux-s390x@0.14.54:
+    resolution: {integrity: sha1-0YhcTFp2u7Wg/hguLIxg654p8qY=, tarball: esbuild-linux-s390x/download/esbuild-linux-s390x-0.14.54.tgz}
+    engines: {node: '>=12'}
+    cpu: [s390x]
+    os: [linux]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /esbuild-netbsd-64@0.14.54:
+    resolution: {integrity: sha1-aa6Rei/yQbffHb8iuvBL0zA0noE=, tarball: esbuild-netbsd-64/download/esbuild-netbsd-64-0.14.54.tgz}
+    engines: {node: '>=12'}
+    cpu: [x64]
+    os: [netbsd]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /esbuild-openbsd-64@0.14.54:
+    resolution: {integrity: sha1-20yElSh6NQpnkN4i7eokelfF1Hs=, tarball: esbuild-openbsd-64/download/esbuild-openbsd-64-0.14.54.tgz}
+    engines: {node: '>=12'}
+    cpu: [x64]
+    os: [openbsd]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /esbuild-sunos-64@0.14.54:
+    resolution: {integrity: sha1-VCh+49pz04RLchwhvIDB3H4b99o=, tarball: esbuild-sunos-64/download/esbuild-sunos-64-0.14.54.tgz}
+    engines: {node: '>=12'}
+    cpu: [x64]
+    os: [sunos]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /esbuild-windows-32@0.14.54:
+    resolution: {integrity: sha1-+Kr5pWZ2MLQPD7OqN78Bu9NAzjE=, tarball: esbuild-windows-32/download/esbuild-windows-32-0.14.54.tgz}
+    engines: {node: '>=12'}
+    cpu: [ia32]
+    os: [win32]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /esbuild-windows-64@0.14.54:
+    resolution: {integrity: sha1-v1S1G9PpsPGIb/2yJKQXYDHqCvQ=, tarball: esbuild-windows-64/download/esbuild-windows-64-0.14.54.tgz}
+    engines: {node: '>=12'}
+    cpu: [x64]
+    os: [win32]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /esbuild-windows-arm64@0.14.54:
+    resolution: {integrity: sha1-k30VZ1oV5LDk+v26o6Aad2or6YI=, tarball: esbuild-windows-arm64/download/esbuild-windows-arm64-0.14.54.tgz}
+    engines: {node: '>=12'}
+    cpu: [arm64]
+    os: [win32]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /esbuild@0.14.54:
+    resolution: {integrity: sha1-i0Tc8rDxpm/CJFmUPcz0d1NemqI=, tarball: esbuild/download/esbuild-0.14.54.tgz}
+    engines: {node: '>=12'}
+    hasBin: true
+    requiresBuild: true
+    optionalDependencies:
+      '@esbuild/linux-loong64': 0.14.54
+      esbuild-android-64: 0.14.54
+      esbuild-android-arm64: 0.14.54
+      esbuild-darwin-64: 0.14.54
+      esbuild-darwin-arm64: 0.14.54
+      esbuild-freebsd-64: 0.14.54
+      esbuild-freebsd-arm64: 0.14.54
+      esbuild-linux-32: 0.14.54
+      esbuild-linux-64: 0.14.54
+      esbuild-linux-arm: 0.14.54
+      esbuild-linux-arm64: 0.14.54
+      esbuild-linux-mips64le: 0.14.54
+      esbuild-linux-ppc64le: 0.14.54
+      esbuild-linux-riscv64: 0.14.54
+      esbuild-linux-s390x: 0.14.54
+      esbuild-netbsd-64: 0.14.54
+      esbuild-openbsd-64: 0.14.54
+      esbuild-sunos-64: 0.14.54
+      esbuild-windows-32: 0.14.54
+      esbuild-windows-64: 0.14.54
+      esbuild-windows-arm64: 0.14.54
+    dev: true
+
+  /escalade@3.1.1:
+    resolution: {integrity: sha1-2M/ccACWXFoBdLSoLqpcBVJ0LkA=, tarball: escalade/download/escalade-3.1.1.tgz}
+    engines: {node: '>=6'}
+    dev: true
+
+  /fill-range@7.0.1:
+    resolution: {integrity: sha1-GRmmp8df44ssfHflGYU12prN2kA=, tarball: fill-range/download/fill-range-7.0.1.tgz}
+    engines: {node: '>=8'}
+    dependencies:
+      to-regex-range: 5.0.1
+    dev: true
+
+  /fraction.js@4.2.0:
+    resolution: {integrity: sha1-RI5RCaMTo1J/WjqyEZ7Ezw4OKVA=, tarball: fraction.js/download/fraction.js-4.2.0.tgz}
+    dev: true
+
+  /fsevents@2.3.2:
+    resolution: {integrity: sha1-ilJveLj99GI7cJ4Ll1xSwkwC/Ro=, tarball: fsevents/download/fsevents-2.3.2.tgz}
+    engines: {node: ^8.16.0 || ^10.6.0 || >=11.0.0}
+    os: [darwin]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /function-bind@1.1.1:
+    resolution: {integrity: sha1-pWiZ0+o8m6uHS7l3O3xe3pL0iV0=, tarball: function-bind/download/function-bind-1.1.1.tgz}
+    dev: true
+
+  /glob-parent@5.1.2:
+    resolution: {integrity: sha1-hpgyxYA0/mikCTwX3BXoNA2EAcQ=, tarball: glob-parent/download/glob-parent-5.1.2.tgz}
+    engines: {node: '>= 6'}
+    dependencies:
+      is-glob: 4.0.3
+    dev: true
+
+  /has@1.0.3:
+    resolution: {integrity: sha1-ci18v8H2qoJB8W3YFOAR4fQeh5Y=, tarball: has/download/has-1.0.3.tgz}
+    engines: {node: '>= 0.4.0'}
+    dependencies:
+      function-bind: 1.1.1
+    dev: true
+
+  /is-binary-path@2.1.0:
+    resolution: {integrity: sha1-6h9/O4DwZCNug0cPhsCcJU+0Wwk=, tarball: is-binary-path/download/is-binary-path-2.1.0.tgz}
+    engines: {node: '>=8'}
+    dependencies:
+      binary-extensions: 2.2.0
+    dev: true
+
+  /is-core-module@2.12.1:
+    resolution: {integrity: sha1-DAtohbb4ABHHFUHOFcjWbPWk+f0=, tarball: is-core-module/download/is-core-module-2.12.1.tgz}
+    dependencies:
+      has: 1.0.3
+    dev: true
+
+  /is-extglob@2.1.1:
+    resolution: {integrity: sha1-qIwCU1eR8C7TfHahueqXc8gz+MI=, tarball: is-extglob/download/is-extglob-2.1.1.tgz}
+    engines: {node: '>=0.10.0'}
+    dev: true
+
+  /is-glob@4.0.3:
+    resolution: {integrity: sha1-ZPYeQsu7LuwgcanawLKLoeZdUIQ=, tarball: is-glob/download/is-glob-4.0.3.tgz}
+    engines: {node: '>=0.10.0'}
+    dependencies:
+      is-extglob: 2.1.1
+    dev: true
+
+  /is-number@7.0.0:
+    resolution: {integrity: sha1-dTU0W4lnNNX4DE0GxQlVUnoU8Ss=, tarball: is-number/download/is-number-7.0.0.tgz}
+    engines: {node: '>=0.12.0'}
+    dev: true
+
+  /jsonc-parser@3.2.0:
+    resolution: {integrity: sha1-Mf8/TCuXk/icZyEmJ8UcY5T4jnY=, tarball: jsonc-parser/download/jsonc-parser-3.2.0.tgz}
+    dev: true
+
+  /nanoid@3.3.6:
+    resolution: {integrity: sha1-RDOAyFbW6fmCQmfZYLQjatWD6kw=, tarball: nanoid/download/nanoid-3.3.6.tgz}
+    engines: {node: ^10 || ^12 || ^13.7 || ^14 || >=15.0.1}
+    hasBin: true
+    dev: true
+
+  /node-releases@2.0.12:
+    resolution: {integrity: sha1-NWJ8wiSiO/sG+zOA8rOvqqfrEDk=, tarball: node-releases/download/node-releases-2.0.12.tgz}
+    dev: true
+
+  /normalize-path@3.0.0:
+    resolution: {integrity: sha1-Dc1p/yOhybEf0JeDFmRKA4ghamU=, tarball: normalize-path/download/normalize-path-3.0.0.tgz}
+    engines: {node: '>=0.10.0'}
+    dev: true
+
+  /normalize-range@0.1.2:
+    resolution: {integrity: sha1-LRDAa9/TEuqXd2laTShDlFa3WUI=, tarball: normalize-range/download/normalize-range-0.1.2.tgz}
+    engines: {node: '>=0.10.0'}
+    dev: true
+
+  /path-parse@1.0.7:
+    resolution: {integrity: sha1-+8EUtgykKzDZ2vWFjkvWi77bZzU=, tarball: path-parse/download/path-parse-1.0.7.tgz}
+    dev: true
+
+  /picocolors@1.0.0:
+    resolution: {integrity: sha1-y1vcdP8/UYkiNur3nWi8RFZKuBw=, tarball: picocolors/download/picocolors-1.0.0.tgz}
+    dev: true
+
+  /picomatch@2.3.1:
+    resolution: {integrity: sha1-O6ODNzNkbZ0+SZWUbBNlpn+wekI=, tarball: picomatch/download/picomatch-2.3.1.tgz}
+    engines: {node: '>=8.6'}
+    dev: true
+
+  /postcss-attribute-case-insensitive@6.0.2:
+    resolution: {integrity: sha1-6EMJGFkyM0LkYYeNIB7nAniAngE=, tarball: postcss-attribute-case-insensitive/download/postcss-attribute-case-insensitive-6.0.2.tgz}
+    engines: {node: ^14 || ^16 || >=18}
+    peerDependencies:
+      postcss: ^8.4
+    dependencies:
+      postcss-selector-parser: 6.0.13
+    dev: true
+
+  /postcss-clamp@4.1.0:
+    resolution: {integrity: sha1-cmPpWrrdjCuhvZEbC1pcnJPgI2M=, tarball: postcss-clamp/download/postcss-clamp-4.1.0.tgz}
+    engines: {node: '>=7.6.0'}
+    peerDependencies:
+      postcss: ^8.4.6
+    dependencies:
+      postcss-value-parser: 4.2.0
+    dev: true
+
+  /postcss-color-functional-notation@6.0.0:
+    resolution: {integrity: sha1-3MG4ticwmcWXp5DcSE2J4lc/Xxc=, tarball: postcss-color-functional-notation/download/postcss-color-functional-notation-6.0.0.tgz}
+    engines: {node: ^14 || ^16 || >=18}
+    peerDependencies:
+      postcss: ^8.4
+    dependencies:
+      '@csstools/postcss-progressive-custom-properties': 3.0.0
+      postcss-value-parser: 4.2.0
+    dev: true
+
+  /postcss-color-hex-alpha@9.0.2:
+    resolution: {integrity: sha1-bT7VA0KAJGmICYGhmZUV0AP/fXk=, tarball: postcss-color-hex-alpha/download/postcss-color-hex-alpha-9.0.2.tgz}
+    engines: {node: ^14 || ^16 || >=18}
+    peerDependencies:
+      postcss: ^8.4
+    dependencies:
+      postcss-value-parser: 4.2.0
+    dev: true
+
+  /postcss-color-rebeccapurple@9.0.0:
+    resolution: {integrity: sha1-MXv3GJYscLd576zz3AQMVvBdA84=, tarball: postcss-color-rebeccapurple/download/postcss-color-rebeccapurple-9.0.0.tgz}
+    engines: {node: ^14 || ^16 || >=18}
+    peerDependencies:
+      postcss: ^8.4
+    dependencies:
+      postcss-value-parser: 4.2.0
+    dev: true
+
+  /postcss-custom-media@10.0.0:
+    resolution: {integrity: sha1-KZeB9n0EPefT6qE5I8JsWG2c1Xo=, tarball: postcss-custom-media/download/postcss-custom-media-10.0.0.tgz}
+    engines: {node: ^14 || ^16 || >=18}
+    peerDependencies:
+      postcss: ^8.4
+    dependencies:
+      '@csstools/cascade-layer-name-parser': 1.0.3(@csstools/css-parser-algorithms@2.3.0)(@csstools/css-tokenizer@2.1.1)
+      '@csstools/css-parser-algorithms': 2.3.0(@csstools/css-tokenizer@2.1.1)
+      '@csstools/css-tokenizer': 2.1.1
+      '@csstools/media-query-list-parser': 2.1.2(@csstools/css-parser-algorithms@2.3.0)(@csstools/css-tokenizer@2.1.1)
+    dev: true
+
+  /postcss-custom-properties@13.2.1:
+    resolution: {integrity: sha1-gkUuoJt5a/AnHMlFutzKGO9Z3xw=, tarball: postcss-custom-properties/download/postcss-custom-properties-13.2.1.tgz}
+    engines: {node: ^14 || ^16 || >=18}
+    peerDependencies:
+      postcss: ^8.4
+    dependencies:
+      '@csstools/cascade-layer-name-parser': 1.0.3(@csstools/css-parser-algorithms@2.3.0)(@csstools/css-tokenizer@2.1.1)
+      '@csstools/css-parser-algorithms': 2.3.0(@csstools/css-tokenizer@2.1.1)
+      '@csstools/css-tokenizer': 2.1.1
+      postcss-value-parser: 4.2.0
+    dev: true
+
+  /postcss-custom-selectors@7.1.4:
+    resolution: {integrity: sha1-WYCXI1MRmvDZclvczK1Gvoz8kBE=, tarball: postcss-custom-selectors/download/postcss-custom-selectors-7.1.4.tgz}
+    engines: {node: ^14 || ^16 || >=18}
+    peerDependencies:
+      postcss: ^8.4
+    dependencies:
+      '@csstools/cascade-layer-name-parser': 1.0.3(@csstools/css-parser-algorithms@2.3.0)(@csstools/css-tokenizer@2.1.1)
+      '@csstools/css-parser-algorithms': 2.3.0(@csstools/css-tokenizer@2.1.1)
+      '@csstools/css-tokenizer': 2.1.1
+      postcss-selector-parser: 6.0.13
+    dev: true
+
+  /postcss-dir-pseudo-class@8.0.0:
+    resolution: {integrity: sha1-nk430XD2clINPzj9g3bbDKBNTpw=, tarball: postcss-dir-pseudo-class/download/postcss-dir-pseudo-class-8.0.0.tgz}
+    engines: {node: ^14 || ^16 || >=18}
+    peerDependencies:
+      postcss: ^8.4
+    dependencies:
+      postcss-selector-parser: 6.0.13
+    dev: true
+
+  /postcss-double-position-gradients@5.0.0:
+    resolution: {integrity: sha1-zcEeEhDD+9P3vCQqXug+W519uPo=, tarball: postcss-double-position-gradients/download/postcss-double-position-gradients-5.0.0.tgz}
+    engines: {node: ^14 || ^16 || >=18}
+    peerDependencies:
+      postcss: ^8.4
+    dependencies:
+      '@csstools/postcss-progressive-custom-properties': 3.0.0
+      postcss-value-parser: 4.2.0
+    dev: true
+
+  /postcss-focus-visible@9.0.0:
+    resolution: {integrity: sha1-qBInQo1vHlJAmcZYH3xxMvmH44I=, tarball: postcss-focus-visible/download/postcss-focus-visible-9.0.0.tgz}
+    engines: {node: ^14 || ^16 || >=18}
+    peerDependencies:
+      postcss: ^8.4
+    dependencies:
+      postcss-selector-parser: 6.0.13
+    dev: true
+
+  /postcss-focus-within@8.0.0:
+    resolution: {integrity: sha1-gwQ4DdLa3Bwtz6UoFv+Gvnc2/BY=, tarball: postcss-focus-within/download/postcss-focus-within-8.0.0.tgz}
+    engines: {node: ^14 || ^16 || >=18}
+    peerDependencies:
+      postcss: ^8.4
+    dependencies:
+      postcss-selector-parser: 6.0.13
+    dev: true
+
+  /postcss-font-variant@5.0.0:
+    resolution: {integrity: sha1-79WbS36ouwYSfy0DG/u38k0y+mY=, tarball: postcss-font-variant/download/postcss-font-variant-5.0.0.tgz}
+    peerDependencies:
+      postcss: ^8.1.0
+    dev: true
+
+  /postcss-gap-properties@5.0.0:
+    resolution: {integrity: sha1-O9d/PVH6yx2kBLTt1yuCA5KThaU=, tarball: postcss-gap-properties/download/postcss-gap-properties-5.0.0.tgz}
+    engines: {node: ^14 || ^16 || >=18}
+    peerDependencies:
+      postcss: ^8.4
+    dev: true
+
+  /postcss-image-set-function@6.0.0:
+    resolution: {integrity: sha1-paukqAWukDq4IAtYQkIUnEjEgfs=, tarball: postcss-image-set-function/download/postcss-image-set-function-6.0.0.tgz}
+    engines: {node: ^14 || ^16 || >=18}
+    peerDependencies:
+      postcss: ^8.4
+    dependencies:
+      postcss-value-parser: 4.2.0
+    dev: true
+
+  /postcss-initial@4.0.1:
+    resolution: {integrity: sha1-Up9zX3LFckoPswUn32+3rFTX3kI=, tarball: postcss-initial/download/postcss-initial-4.0.1.tgz}
+    peerDependencies:
+      postcss: ^8.0.0
+    dev: true
+
+  /postcss-lab-function@6.0.0:
+    resolution: {integrity: sha1-ga4uv+FDSRFuH68nA+fyjd2XvQ8=, tarball: postcss-lab-function/download/postcss-lab-function-6.0.0.tgz}
+    engines: {node: ^14 || ^16 || >=18}
+    peerDependencies:
+      postcss: ^8.4
+    dependencies:
+      '@csstools/css-color-parser': 1.2.2(@csstools/css-parser-algorithms@2.3.0)(@csstools/css-tokenizer@2.1.1)
+      '@csstools/css-parser-algorithms': 2.3.0(@csstools/css-tokenizer@2.1.1)
+      '@csstools/css-tokenizer': 2.1.1
+      '@csstools/postcss-progressive-custom-properties': 3.0.0
+    dev: true
+
+  /postcss-logical@7.0.0:
+    resolution: {integrity: sha1-moNCbnFuPI+Vfdo/2HTtvPIsdU4=, tarball: postcss-logical/download/postcss-logical-7.0.0.tgz}
+    engines: {node: ^14 || ^16 || >=18}
+    peerDependencies:
+      postcss: ^8.4
+    dependencies:
+      postcss-value-parser: 4.2.0
+    dev: true
+
+  /postcss-nesting@12.0.0:
+    resolution: {integrity: sha1-cpkyKTuSWsW//LbfHiYg+qBEdVQ=, tarball: postcss-nesting/download/postcss-nesting-12.0.0.tgz}
+    engines: {node: ^14 || ^16 || >=18}
+    peerDependencies:
+      postcss: ^8.4
+    dependencies:
+      '@csstools/selector-specificity': 3.0.0(postcss-selector-parser@6.0.13)
+      postcss-selector-parser: 6.0.13
+    dev: true
+
+  /postcss-opacity-percentage@2.0.0:
+    resolution: {integrity: sha1-wKVgYM1FhuP5VNveHv/8Le7VMAI=, tarball: postcss-opacity-percentage/download/postcss-opacity-percentage-2.0.0.tgz}
+    engines: {node: ^14 || ^16 || >=18}
+    peerDependencies:
+      postcss: ^8.2
+    dev: true
+
+  /postcss-overflow-shorthand@5.0.0:
+    resolution: {integrity: sha1-HtbWxTLN9Stdq+wGZi3GP5IHhVw=, tarball: postcss-overflow-shorthand/download/postcss-overflow-shorthand-5.0.0.tgz}
+    engines: {node: ^14 || ^16 || >=18}
+    peerDependencies:
+      postcss: ^8.4
+    dependencies:
+      postcss-value-parser: 4.2.0
+    dev: true
+
+  /postcss-page-break@3.0.4:
+    resolution: {integrity: sha1-f790HCM2IWIraNQ1ur+3DdjB7l8=, tarball: postcss-page-break/download/postcss-page-break-3.0.4.tgz}
+    peerDependencies:
+      postcss: ^8
+    dev: true
+
+  /postcss-place@9.0.0:
+    resolution: {integrity: sha1-fkeFG/QNFs4G9gE0U7cGEAymwQI=, tarball: postcss-place/download/postcss-place-9.0.0.tgz}
+    engines: {node: ^14 || ^16 || >=18}
+    peerDependencies:
+      postcss: ^8.4
+    dependencies:
+      postcss-value-parser: 4.2.0
+    dev: true
+
+  /postcss-preset-env@9.0.0:
+    resolution: {integrity: sha1-nKT8XAtKBYTUKEAIoz7C1FbitaU=, tarball: postcss-preset-env/download/postcss-preset-env-9.0.0.tgz}
+    engines: {node: ^14 || ^16 || >=18}
+    peerDependencies:
+      postcss: ^8.4
+    dependencies:
+      '@csstools/postcss-cascade-layers': 4.0.0
+      '@csstools/postcss-color-function': 2.2.3
+      '@csstools/postcss-color-mix-function': 1.0.3
+      '@csstools/postcss-font-format-keywords': 3.0.0
+      '@csstools/postcss-gradients-interpolation-method': 4.0.0
+      '@csstools/postcss-hwb-function': 3.0.0
+      '@csstools/postcss-ic-unit': 3.0.0
+      '@csstools/postcss-is-pseudo-class': 4.0.0
+      '@csstools/postcss-logical-float-and-clear': 2.0.0
+      '@csstools/postcss-logical-resize': 2.0.0
+      '@csstools/postcss-logical-viewport-units': 2.0.0
+      '@csstools/postcss-media-minmax': 1.0.5
+      '@csstools/postcss-media-queries-aspect-ratio-number-values': 2.0.0
+      '@csstools/postcss-nested-calc': 3.0.0
+      '@csstools/postcss-normalize-display-values': 3.0.0
+      '@csstools/postcss-oklab-function': 3.0.0
+      '@csstools/postcss-progressive-custom-properties': 3.0.0
+      '@csstools/postcss-relative-color-syntax': 2.0.0
+      '@csstools/postcss-scope-pseudo-class': 3.0.0
+      '@csstools/postcss-stepped-value-functions': 3.0.0
+      '@csstools/postcss-text-decoration-shorthand': 3.0.0
+      '@csstools/postcss-trigonometric-functions': 3.0.0
+      '@csstools/postcss-unset-value': 3.0.0
+      autoprefixer: 10.4.14
+      browserslist: 4.21.9
+      css-blank-pseudo: 6.0.0
+      css-has-pseudo: 6.0.0
+      css-prefers-color-scheme: 9.0.0
+      cssdb: 7.6.0
+      postcss-attribute-case-insensitive: 6.0.2
+      postcss-clamp: 4.1.0
+      postcss-color-functional-notation: 6.0.0
+      postcss-color-hex-alpha: 9.0.2
+      postcss-color-rebeccapurple: 9.0.0
+      postcss-custom-media: 10.0.0
+      postcss-custom-properties: 13.2.1
+      postcss-custom-selectors: 7.1.4
+      postcss-dir-pseudo-class: 8.0.0
+      postcss-double-position-gradients: 5.0.0
+      postcss-focus-visible: 9.0.0
+      postcss-focus-within: 8.0.0
+      postcss-font-variant: 5.0.0
+      postcss-gap-properties: 5.0.0
+      postcss-image-set-function: 6.0.0
+      postcss-initial: 4.0.1
+      postcss-lab-function: 6.0.0
+      postcss-logical: 7.0.0
+      postcss-nesting: 12.0.0
+      postcss-opacity-percentage: 2.0.0
+      postcss-overflow-shorthand: 5.0.0
+      postcss-page-break: 3.0.4
+      postcss-place: 9.0.0
+      postcss-pseudo-class-any-link: 9.0.0
+      postcss-replace-overflow-wrap: 4.0.0
+      postcss-selector-not: 7.0.1
+      postcss-value-parser: 4.2.0
+    dev: true
+
+  /postcss-pseudo-class-any-link@9.0.0:
+    resolution: {integrity: sha1-X7W3AODs3IRalOtDO4zP91bL9mA=, tarball: postcss-pseudo-class-any-link/download/postcss-pseudo-class-any-link-9.0.0.tgz}
+    engines: {node: ^14 || ^16 || >=18}
+    peerDependencies:
+      postcss: ^8.4
+    dependencies:
+      postcss-selector-parser: 6.0.13
+    dev: true
+
+  /postcss-replace-overflow-wrap@4.0.0:
+    resolution: {integrity: sha1-0t9r7RC0d7+cUvqyjFaLSynKQxk=, tarball: postcss-replace-overflow-wrap/download/postcss-replace-overflow-wrap-4.0.0.tgz}
+    peerDependencies:
+      postcss: ^8.0.3
+    dev: true
+
+  /postcss-selector-not@7.0.1:
+    resolution: {integrity: sha1-gULpDI62yMX67LPp2W1DU9AulPs=, tarball: postcss-selector-not/download/postcss-selector-not-7.0.1.tgz}
+    engines: {node: ^14 || ^16 || >=18}
+    peerDependencies:
+      postcss: ^8.4
+    dependencies:
+      postcss-selector-parser: 6.0.13
+    dev: true
+
+  /postcss-selector-parser@6.0.13:
+    resolution: {integrity: sha1-0F2NdrHo4XMlfvnWC3Bqjl6Zvxs=, tarball: postcss-selector-parser/download/postcss-selector-parser-6.0.13.tgz}
+    engines: {node: '>=4'}
+    dependencies:
+      cssesc: 3.0.0
+      util-deprecate: 1.0.2
+    dev: true
+
+  /postcss-value-parser@4.2.0:
+    resolution: {integrity: sha1-cjwJkgg2um0+WvAZ+SvAlxwC5RQ=, tarball: postcss-value-parser/download/postcss-value-parser-4.2.0.tgz}
+    dev: true
+
+  /postcss@8.4.26:
+    resolution: {integrity: sha1-G8YqsZ+OHlRj2Yz3SvOXAqAKnpQ=, tarball: postcss/download/postcss-8.4.26.tgz}
+    engines: {node: ^10 || ^12 || >=14}
+    dependencies:
+      nanoid: 3.3.6
+      picocolors: 1.0.0
+      source-map-js: 1.0.2
+    dev: true
+
+  /readdirp@3.6.0:
+    resolution: {integrity: sha1-dKNwvYVxFuJFspzJc0DNQxoCpsc=, tarball: readdirp/download/readdirp-3.6.0.tgz}
+    engines: {node: '>=8.10.0'}
+    dependencies:
+      picomatch: 2.3.1
+    dev: true
+
+  /resolve@1.22.2:
+    resolution: {integrity: sha1-DtCUPU4wGGeVV2bJ8+GubQHGhF8=, tarball: resolve/download/resolve-1.22.2.tgz}
+    hasBin: true
+    dependencies:
+      is-core-module: 2.12.1
+      path-parse: 1.0.7
+      supports-preserve-symlinks-flag: 1.0.0
+    dev: true
+
+  /rollup@2.77.3:
+    resolution: {integrity: sha1-jwBBjTonQANuFd62U77RqQ7gzBI=, tarball: rollup/download/rollup-2.77.3.tgz}
+    engines: {node: '>=10.0.0'}
+    hasBin: true
+    optionalDependencies:
+      fsevents: 2.3.2
+    dev: true
+
+  /source-map-js@1.0.2:
+    resolution: {integrity: sha1-rbw2HZxi3zgBJefxYfccgm8eSQw=, tarball: source-map-js/download/source-map-js-1.0.2.tgz}
+    engines: {node: '>=0.10.0'}
+    dev: true
+
+  /supports-preserve-symlinks-flag@1.0.0:
+    resolution: {integrity: sha1-btpL00SjyUrqN21MwxvHcxEDngk=, tarball: supports-preserve-symlinks-flag/download/supports-preserve-symlinks-flag-1.0.0.tgz}
+    engines: {node: '>= 0.4'}
+    dev: true
+
+  /to-regex-range@5.0.1:
+    resolution: {integrity: sha1-FkjESq58jZiKMmAY7XL1tN0DkuQ=, tarball: to-regex-range/download/to-regex-range-5.0.1.tgz}
+    engines: {node: '>=8.0'}
+    dependencies:
+      is-number: 7.0.0
+    dev: true
+
+  /update-browserslist-db@1.0.11(browserslist@4.21.9):
+    resolution: {integrity: sha1-mipkGtKQeuezYWUG9Ll3hR21uUA=, tarball: update-browserslist-db/download/update-browserslist-db-1.0.11.tgz}
+    hasBin: true
+    peerDependencies:
+      browserslist: '>= 4.21.0'
+    dependencies:
+      browserslist: 4.21.9
+      escalade: 3.1.1
+      picocolors: 1.0.0
+    dev: true
+
+  /util-deprecate@1.0.2:
+    resolution: {integrity: sha1-RQ1Nyfpw3nMnYvvS1KKJgUGaDM8=, tarball: util-deprecate/download/util-deprecate-1.0.2.tgz}
+    dev: true
+
+  /vite-aliases@0.8.7:
+    resolution: {integrity: sha1-zgSav6LRxw24hT/iyWHBpl4xRQI=, tarball: vite-aliases/download/vite-aliases-0.8.7.tgz}
+    dependencies:
+      chokidar: 3.5.3
+      consola: 2.15.3
+      jsonc-parser: 3.2.0
+      vite: 2.9.16
+    transitivePeerDependencies:
+      - less
+      - sass
+      - stylus
+    dev: true
+
+  /vite@2.9.16:
+    resolution: {integrity: sha1-2ve6UPXMN6e/UbEYuga8Nul4mOk=, tarball: vite/download/vite-2.9.16.tgz}
+    engines: {node: '>=12.2.0'}
+    hasBin: true
+    peerDependencies:
+      less: '*'
+      sass: '*'
+      stylus: '*'
+    peerDependenciesMeta:
+      less:
+        optional: true
+      sass:
+        optional: true
+      stylus:
+        optional: true
+    dependencies:
+      esbuild: 0.14.54
+      postcss: 8.4.26
+      resolve: 1.22.2
+      rollup: 2.77.3
+    optionalDependencies:
+      fsevents: 2.3.2
+    dev: true
 
   registry.npmmirror.com/esbuild@0.18.13:
     resolution: {integrity: sha512-vhg/WR/Oiu4oUIkVhmfcc23G6/zWuEQKFS+yiosSHe4aN6+DQRXIfeloYGibIfVhkr4wyfuVsGNLr+sQU1rWWw==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/esbuild/-/esbuild-0.18.13.tgz}
@@ -265,39 +1391,29 @@ packages:
     hasBin: true
     requiresBuild: true
     optionalDependencies:
-      '@esbuild/android-arm': registry.npmmirror.com/@esbuild/android-arm@0.18.13
-      '@esbuild/android-arm64': registry.npmmirror.com/@esbuild/android-arm64@0.18.13
-      '@esbuild/android-x64': registry.npmmirror.com/@esbuild/android-x64@0.18.13
-      '@esbuild/darwin-arm64': registry.npmmirror.com/@esbuild/darwin-arm64@0.18.13
-      '@esbuild/darwin-x64': registry.npmmirror.com/@esbuild/darwin-x64@0.18.13
-      '@esbuild/freebsd-arm64': registry.npmmirror.com/@esbuild/freebsd-arm64@0.18.13
-      '@esbuild/freebsd-x64': registry.npmmirror.com/@esbuild/freebsd-x64@0.18.13
-      '@esbuild/linux-arm': registry.npmmirror.com/@esbuild/linux-arm@0.18.13
-      '@esbuild/linux-arm64': registry.npmmirror.com/@esbuild/linux-arm64@0.18.13
-      '@esbuild/linux-ia32': registry.npmmirror.com/@esbuild/linux-ia32@0.18.13
-      '@esbuild/linux-loong64': registry.npmmirror.com/@esbuild/linux-loong64@0.18.13
-      '@esbuild/linux-mips64el': registry.npmmirror.com/@esbuild/linux-mips64el@0.18.13
-      '@esbuild/linux-ppc64': registry.npmmirror.com/@esbuild/linux-ppc64@0.18.13
-      '@esbuild/linux-riscv64': registry.npmmirror.com/@esbuild/linux-riscv64@0.18.13
-      '@esbuild/linux-s390x': registry.npmmirror.com/@esbuild/linux-s390x@0.18.13
-      '@esbuild/linux-x64': registry.npmmirror.com/@esbuild/linux-x64@0.18.13
-      '@esbuild/netbsd-x64': registry.npmmirror.com/@esbuild/netbsd-x64@0.18.13
-      '@esbuild/openbsd-x64': registry.npmmirror.com/@esbuild/openbsd-x64@0.18.13
-      '@esbuild/sunos-x64': registry.npmmirror.com/@esbuild/sunos-x64@0.18.13
-      '@esbuild/win32-arm64': registry.npmmirror.com/@esbuild/win32-arm64@0.18.13
-      '@esbuild/win32-ia32': registry.npmmirror.com/@esbuild/win32-ia32@0.18.13
-      '@esbuild/win32-x64': registry.npmmirror.com/@esbuild/win32-x64@0.18.13
+      '@esbuild/android-arm': 0.18.13
+      '@esbuild/android-arm64': 0.18.13
+      '@esbuild/android-x64': 0.18.13
+      '@esbuild/darwin-arm64': 0.18.13
+      '@esbuild/darwin-x64': 0.18.13
+      '@esbuild/freebsd-arm64': 0.18.13
+      '@esbuild/freebsd-x64': 0.18.13
+      '@esbuild/linux-arm': 0.18.13
+      '@esbuild/linux-arm64': 0.18.13
+      '@esbuild/linux-ia32': 0.18.13
+      '@esbuild/linux-loong64': 0.18.13
+      '@esbuild/linux-mips64el': 0.18.13
+      '@esbuild/linux-ppc64': 0.18.13
+      '@esbuild/linux-riscv64': 0.18.13
+      '@esbuild/linux-s390x': 0.18.13
+      '@esbuild/linux-x64': 0.18.13
+      '@esbuild/netbsd-x64': 0.18.13
+      '@esbuild/openbsd-x64': 0.18.13
+      '@esbuild/sunos-x64': 0.18.13
+      '@esbuild/win32-arm64': 0.18.13
+      '@esbuild/win32-ia32': 0.18.13
+      '@esbuild/win32-x64': 0.18.13
     dev: true
-
-  registry.npmmirror.com/fsevents@2.3.2:
-    resolution: {integrity: sha512-xiqMQR4xAeHTuB9uWm+fFRcIOgKBMiOBP+eXiyT7jsgVCq1bkVygt00oASowB7EdtpOHaaPgKt812P9ab+DDKA==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/fsevents/-/fsevents-2.3.2.tgz}
-    name: fsevents
-    version: 2.3.2
-    engines: {node: ^8.16.0 || ^10.6.0 || >=11.0.0}
-    os: [darwin]
-    requiresBuild: true
-    dev: true
-    optional: true
 
   registry.npmmirror.com/lodash-es@4.17.21:
     resolution: {integrity: sha512-mKnC+QJ9pWVzv+C4/U3rRsHapFfHvQFoFB92e52xeyGMcX6/OlIl78je1u8vePzYZSkkogMPJ2yjxxsb89cxyw==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/lodash-es/-/lodash-es-4.17.21.tgz}
@@ -343,7 +1459,7 @@ packages:
     engines: {node: '>=14.18.0', npm: '>=8.0.0'}
     hasBin: true
     optionalDependencies:
-      fsevents: registry.npmmirror.com/fsevents@2.3.2
+      fsevents: 2.3.2
     dev: true
 
   registry.npmmirror.com/source-map-js@1.0.2:
@@ -387,5 +1503,5 @@ packages:
       postcss: registry.npmmirror.com/postcss@8.4.26
       rollup: registry.npmmirror.com/rollup@3.26.2
     optionalDependencies:
-      fsevents: registry.npmmirror.com/fsevents@2.3.2
+      fsevents: 2.3.2
     dev: true
