@@ -194,3 +194,27 @@ export default {
   ],
 };
 以上就是 Vite 插件的主要方面，你可以根据项目需求选择合适的插件来扩展 Vite 的功能。
+
+# vite常用插件之vite-plugin-html
+
+webpack
+webpack-html-plugin / clean-webpack-plugin (clean： true)
+其实就是因为vite他内置了非常多的插件，然后我们作为普通的开发者不需要承担这么高的心智负担
+vue react
+vite也集成了vue团队一贯的作风 减少心智负担 css-loader less-loader ts-loader
+vite将很多核心插件全部内置了
+
+# vite常用插件之vite-plugin-mock
+
+mock数据：模拟数据
+前后端一般是并行开发 用户列表
+接口文档）
+mock数据 去做你前端的工作
+
+1. 简单方式：直接去写死一两个数据 方便调试
+缺陷：
+- 没法做海量数据测试
+- 没法获得一些标准数据
+- 没法去感知http的异常
+- axios异常
+2. mockis: 模拟海量数据的， vite-plugin-mock的依赖项就是mockis

@@ -10,12 +10,14 @@
     "test": "vite --mode test"
   },
   "dependencies": {
-    "lodash": "^4.17.21",
-    "lodash-es": "^4.17.21"
+    "lodash": "^4.17.21"
   },
   "devDependencies": {
+    "mockjs": "^1.1.0",
     "postcss-preset-env": "^9.0.0",
     "vite": "^4.4.4",
-    "vite-aliases": "^0.8.7"
+    "vite-aliases": "^0.8.7",
+    "vite-plugin-html": "^3.2.0",
+    "vite-plugin-mock": "^3.0.0"
   }
 }
