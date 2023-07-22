@@ -10,7 +10,41 @@ export default defineConfig({
   optimizeDeps: {
     exclude: [], // 指定数组中的依赖不进行依赖预构建
   },
+  build: {
+    rollupOptions: {
+      assetsFieldName: '[hash].[name].[ext]',
+    },
+  },
   plugins: [
+    {
+      config(options) {
+        console.log('config: ' + options)
+      },
+      configureServer(server) {
+        server.middlewares.use((req, res, next) => {})
+      },
+      transformIndexHtml(html) {
+        return html
+      },
+      // after vite config is resolved
+      configResolved(resolvedOptions) {
+        console.log('最终配置文件\n', resolvedOptions)
+      },
+      // vite preview
+      configurePreviewServer() {},
+      /**
+       * Universe configures
+       */
+      options(rollupOptions) {
+        console.log('rollupOptions: ', rollupOptions)
+      },
+      buildStart(resolvedRollupOptions) {
+        console.log('resolvedRollupOptions: ', resolvedRollupOptions)
+      },
+      /**
+       * awesome vite
+       */
+    },
     ViteAliases({
       prefix: '&',
     }),
