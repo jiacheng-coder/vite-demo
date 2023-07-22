@@ -3,7 +3,8 @@ import { defineConfig } from 'vite'
 import { ViteAliases } from './plugins/ViteAliases'
 // import { createHtmlPlugin } from 'vite-plugin-html'
 import { createHtmlPlugin } from './plugins/VitePluginHtml'
-import { viteMockServe } from 'vite-plugin-mock'
+// import { viteMockServe } from 'vite-plugin-mock'
+import { viteMockServe } from './plugins/VitePluginMock'
 
 export default defineConfig({
   optimizeDeps: {
@@ -16,7 +17,7 @@ export default defineConfig({
     createHtmlPlugin({
       inject: {
         data: {
-          title: '美团 NB',
+          title: '美团',
         },
       },
     }),
