@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+    "skipDefaultLibCheck": true, // 跳过 node_modules 类型检查
+    "module": "ESNext", // 设置允许书写的 JS 版本
+    "types": ["vite/client"],
+    "moduleResolution": "Node",
+    "lib": ["es2015","DOM"]
+  },
+}

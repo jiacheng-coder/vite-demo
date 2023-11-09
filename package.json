@@ -16,8 +16,10 @@
   "devDependencies": {
     "mockjs": "^1.1.0",
     "postcss-preset-env": "^9.0.0",
+    "typescript": "^5.1.6",
     "vite": "^4.4.4",
     "vite-aliases": "^0.8.7",
+    "vite-plugin-checker": "^0.6.1",
     "vite-plugin-html": "^3.2.0",
     "vite-plugin-mock": "^3.0.0"
   }
